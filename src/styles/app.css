@@ -1,0 +1,115 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.app{
+  box-sizing: border-box;
+  margin: auto;
+  margin-top: 20px;
+  padding: 5%;
+  padding-top: 0;
+  border: 1px solid black;
+  width: 95%;
+  overflow: auto;
+}
+
+.header{
+  margin: 20px;
+  border-bottom: 1px solid black;
+  text-align: center;
+}
+
+.header-item{
+  display: inline-block;
+  padding: 0px 5px;
+  margin-bottom: -1px;
+  border: 1px solid black;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.header-item_active{
+	border-bottom: 1px solid white;
+}
+
+.add-form{
+  display: inline-block;
+  float: left;
+  padding: 15px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.form-field{
+  width: 190px;
+  box-sizing: border-box;
+  padding: 5px;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.form-button{
+  padding: 7px 35px;
+}
+
+.form-name{
+  display: inline-block;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.employers-head{
+  border-bottom: 2px solid black;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.employer-list{
+  display: inline-block;
+  float: right;	
+}
+
+.employer-item{
+  padding: 3px 70px;
+  border-bottom: 1px solid;
+}
