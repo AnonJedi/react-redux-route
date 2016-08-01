@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
+import * as employersAction from '../actions/EmployersAction';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
-export default class EmployersList extends Component {
+
+class EmployersList extends Component {
 	componentDidMount() {
-		this.props.downloadEmployers();
+		this.props.employersAction.downloadEmployers();
 	}
 
 	render() {
-		debugger
 		return (
 			<table className='employer-list' >
 				<thead className='employers-head'>
-					<td>firstname</td>
-					<td>surename</td>
-					<td>role</td>
+					<tr>
+						<th className='employer-item'>firstname</th>
+						<th className='employer-item'>surename</th>
+						<th className='employer-item'>role</th>
+					</tr>
 				</thead>
 				<tbody>
 					{this.props.employers.map((employer) => (
@@ -27,3 +32,17 @@ export default class EmployersList extends Component {
 		)
 	}
 }
+
+function mapStateToProps(state) {
+    return {
+        employers: state.employer.employers
+    }
+}
+
+function mapDispatchToProps(dispatch) {
+    return {
+        employersAction: bindActionCreators(employersAction, dispatch)
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(EmployersList);

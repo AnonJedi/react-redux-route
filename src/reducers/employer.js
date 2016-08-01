@@ -1,6 +1,5 @@
 const initialState = {
-	employers: [],
-	new_employer: {}
+	employers: []
 }
 
 export default (state = initialState, action) => {

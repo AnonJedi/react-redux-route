@@ -4,4 +4,4 @@ import employer from './employer';
 
 export default combineReducers({
 	employer
-}) 
+}); 
