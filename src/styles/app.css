@@ -107,9 +107,19 @@ table {
 .employer-list{
   display: inline-block;
   float: right;	
+  text-align: center;
+}
+
+.employer-header{
+  padding: 3px 50px;
+  border-bottom: 1px solid;
 }
 
 .employer-item{
-  padding: 3px 50px;
+  padding: 3px 0px;
   border-bottom: 1px solid;
+}
+
+.acitve-tab{
+  border-bottom: 1px solid white;
 }

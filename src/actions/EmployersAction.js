@@ -73,14 +73,14 @@ const employers = [
 	}
 ]
 
-export function downloadEmployers() {
-	return (dispatch) => {
+export const downloadEmployers = () => (
+	(dispatch) => {
 		dispatch({
 			type: 'DOWNLOAD_EMPLOYERS_LIST',
 			employers: employers
-		})
+		});
 	}
-}
+);
 
 // export const addNewEmployer = (employer) => (
 // 	(dispatch) => {
