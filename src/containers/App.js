@@ -10,7 +10,7 @@ export default class App extends Component {
             <div className='app'>
                 <Filter />
                 <Form />
-                <EmployersList />
+                <EmployersList filter={this.props.params.filter || 'all'} />
             </div>
         );
     }

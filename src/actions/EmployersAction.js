@@ -4,72 +4,6 @@ const employers = [
 		'firstname': 'first',  
 		'surename': 'second',
 		'role': 'front'
-	},
-	{
-		'id': 1,
-		'firstname': 'first',  
-		'surename': 'second',
-		'role': 'front'
-	},
-	{
-		'id': 1,
-		'firstname': 'first',  
-		'surename': 'second',
-		'role': 'front'
-	},
-	{
-		'id': 1,
-		'firstname': 'first',  
-		'surename': 'second',
-		'role': 'front'
-	},
-	{
-		'id': 1,
-		'firstname': 'first',  
-		'surename': 'second',
-		'role': 'front'
-	},
-	{
-		'id': 1,
-		'firstname': 'first',  
-		'surename': 'second',
-		'role': 'front'
-	},
-	{
-		'id': 1,
-		'firstname': 'first',  
-		'surename': 'second',
-		'role': 'front'
-	},
-	{
-		'id': 1,
-		'firstname': 'first',  
-		'surename': 'second',
-		'role': 'front'
-	},
-	{
-		'id': 1,
-		'firstname': 'first',  
-		'surename': 'second',
-		'role': 'front'
-	},
-	{
-		'id': 1,
-		'firstname': 'first',  
-		'surename': 'second',
-		'role': 'front'
-	},
-	{
-		'id': 1,
-		'firstname': 'first',  
-		'surename': 'second',
-		'role': 'front'
-	},
-	{
-		'id': 1,
-		'firstname': 'first',  
-		'surename': 'second',
-		'role': 'front'
 	}
 ]
 
@@ -82,11 +16,11 @@ export const downloadEmployers = () => (
 	}
 );
 
-// export const addNewEmployer = (employer) => (
-// 	(dispatch) => {
-// 		dispatch({
-// 			type: 'ADD_EMPLOYER',
-// 			payload: employer
-// 		});
-// 	}
-// )
+export const addNewEmployer = (employer) => (
+	(dispatch) => {
+		dispatch({
+			type: 'ADD_NEW_EMPLOYER',
+			employer: employer
+		});
+	}
+)

@@ -11,12 +11,12 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-  margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
+  margin: 0;
   font: inherit;
+  font-size: 100%;
   vertical-align: baseline;
+  border: 0;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -42,84 +42,92 @@ table {
   border-spacing: 0;
 }
 
-.app{
-  box-sizing: border-box;
-  margin: auto;
-  margin-top: 20px;
+html {
+  height: 100%;
+}
+
+body {
+  min-width: 100%;
+  background: #e0e0e0;
+}
+
+.app {
+  width: 95%;
+  min-width: 900px;
   padding: 5%;
   padding-top: 0;
-  border: 1px solid black;
-  width: 95%;
+  margin: auto;
+  margin-top: 20px;
   overflow: auto;
-}
-
-.header{
-  margin: 20px;
-  border-bottom: 1px solid black;
-  text-align: center;
-}
-
-.header-item{
-  display: inline-block;
-  padding: 0px 5px;
-  margin-bottom: -1px;
   border: 1px solid black;
+  box-sizing: border-box;
+}
+
+.header {
+  margin: 20px;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+
+.header-item {
+  display: inline-block;
+  padding: 0 5px;
+  margin-bottom: -1px;
   font-size: 24px;
+  color: black;
+  text-decoration: none;
   cursor: pointer;
+  border: 1px solid black;
 }
 
-.header-item_active{
-	border-bottom: 1px solid white;
-}
-
-.add-form{
+.add-form {
   display: inline-block;
   float: left;
   padding: 15px;
-  border: 1px solid black;
   text-align: center;
+  border: 1px solid black;
 }
 
-.form-field{
-  width: 190px;
-  box-sizing: border-box;
-  padding: 5px;
+.form-field {
   display: block;
+  width: 190px;
+  padding: 5px;
   margin-bottom: 12px;
+  box-sizing: border-box;
 }
 
-.form-button{
+.form-button {
   padding: 7px 35px;
 }
 
-.form-name{
+.form-name {
   display: inline-block;
   padding: 10px;
   font-size: 20px;
 }
 
-.employers-head{
-  border-bottom: 2px solid black;
+.employers-head {
   text-align: center;
   text-transform: uppercase;
+  border-bottom: 2px solid black;
 }
 
-.employer-list{
-  display: inline-block;
-  float: right;	
+.employer-list {
+  float: right;
+  width: calc(100% - 240px);
   text-align: center;
 }
 
-.employer-header{
+.employer-header {
   padding: 3px 50px;
   border-bottom: 1px solid;
 }
 
-.employer-item{
-  padding: 3px 0px;
+.employer-item {
+  padding: 3px 0;
   border-bottom: 1px solid;
 }
 
-.acitve-tab{
-  border-bottom: 1px solid white;
+.acitve-tab {
+  border-bottom: 1px solid #e0e0e0;
 }

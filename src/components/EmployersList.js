@@ -3,14 +3,15 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { v4 } from 'node-uuid';
 
-import * as employersAction from '../actions/EmployersAction';
+import { downloadEmployers } from '../actions/EmployersAction';
 
 class EmployersList extends Component {
 	componentDidMount() {
-		this.props.employersAction.downloadEmployers();
+		this.props.downloadEmployers();
 	}
 
 	render() {
+		const currentTab = this.props.filter;
 		return (
 			<table className='employer-list' >
 				<thead className='employers-head'>
@@ -21,23 +22,28 @@ class EmployersList extends Component {
 					</tr>
 				</thead>
 				<tbody>
-					{this.props.employers.map((employer) => (
-						<tr key={v4()}>
-							<td key={v4()} className='employer-item'>{employer.firstname}</td>
-							<td key={v4()} className='employer-item'>{employer.surename}</td>
-							<td key={v4()} className='employer-item'>{employer.role}</td>
-						</tr>)
-					)}
+					{this.props.employers.map((employer) => {
+						if (currentTab === 'all' || employer.role === currentTab) {
+							return (
+								<tr key={v4()}>
+									<td key={v4()} className='employer-item'>{employer.firstname}</td>
+									<td key={v4()} className='employer-item'>{employer.surename}</td>
+									<td key={v4()} className='employer-item'>{employer.role}</td>
+								</tr>)
+						}
+					})}
 				</tbody>
 			</table>
 		)
 	}
 }
 
-const mapStateToProps = (state) => ({employers: state.employer.employers});
+const mapStateToProps = (state) => ({
+	employers: state.employer.employers
+});
 
 const mapDispatchToProps = (dispatch) => ({
-	employersAction: bindActionCreators(employersAction, dispatch)
+	downloadEmployers: bindActionCreators(downloadEmployers, dispatch)
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EmployersList);
