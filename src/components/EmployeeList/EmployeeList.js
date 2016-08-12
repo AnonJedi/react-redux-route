@@ -3,7 +3,9 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { v4 } from 'node-uuid';
 
-import { downloadEmployers } from '../actions/EmployersAction';
+import { downloadEmployers } from '../../actions/EmployersAction';
+import { classes } from './styles';
+
 
 class EmployersList extends Component {
 	componentDidMount() {
@@ -13,12 +15,12 @@ class EmployersList extends Component {
 	render() {
 		const currentTab = this.props.filter;
 		return (
-			<table className='employer-list' >
-				<thead className='employers-head'>
+			<table className={classes.employerList} >
+				<thead className={classes.employerHeader}>
 					<tr>
-						<th className='employer-header'>firstname</th>
-						<th className='employer-header'>surename</th>
-						<th className='employer-header'>role</th>
+						<th className={classes.employerHeader}>firstname</th>
+						<th className={classes.employerHeader}>surename</th>
+						<th className={classes.employerHeader}>role</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -26,9 +28,9 @@ class EmployersList extends Component {
 						if (currentTab === 'all' || employer.role === currentTab) {
 							return (
 								<tr key={v4()}>
-									<td key={v4()} className='employer-item'>{employer.firstname}</td>
-									<td key={v4()} className='employer-item'>{employer.surename}</td>
-									<td key={v4()} className='employer-item'>{employer.role}</td>
+									<td key={v4()} className={classes.employerItem}>{employer.firstname}</td>
+									<td key={v4()} className={classes.employerItem}>{employer.surename}</td>
+									<td key={v4()} className={classes.employerItem}>{employer.role}</td>
 								</tr>)
 						}
 					})}

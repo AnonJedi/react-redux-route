@@ -3,7 +3,8 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { v4 } from 'node-uuid';
 
-import { addNewEmployer } from '../actions/EmployersAction';
+import { addNewEmployer } from '../../actions/EmployersAction';
+import { classes } from './styles';
 
 class Form extends Component {
 
@@ -26,24 +27,24 @@ class Form extends Component {
 
 	render() {
 		return (
-			<form className='add-form' >
-				<label className='form-name'>add employer</label>
+			<form className={classes.addForm} >
+				<label className={classes.formName}>add employer</label>
 				<input type='text' name='firstname' 
 					placeholder='firstname' 
-					className='form-field js-firstname' 
+					className={classes.formField + ' js-firstname'}  
 					required='required' 
 					pattern='[A-Za-zА-Яа-я]+' />
 				<input type='text' name='surename' 
 					placeholder='surename' 
-					className='form-field js-surename' 
+					className={classes.formField + ' js-surename'}  
 					required='required' 
 					pattern='[A-Za-zА-Яа-я]+' />
-				<select className='form-field js-role' >
+				<select className={classes.formField + ' js-role'}  >
 					<option>front</option>
 					<option>back</option>
 				</select>
 				<input type='submit' value='add' 
-					className='form-button'
+					className={classes.formButton}
 					onClick={::this.onSubmitClick} />
 			</form>
 		);
